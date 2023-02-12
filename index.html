@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- link de animação abaixo -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Folha De Pagamento</title>
+  </head>
+  <body>
+    <div class="header">
+      <h2>
+        Bem vindo, aqui você pode verificar o seu salário de acordo com o seu
+        valor por hora
+      </h2>
+    </div>
+
+    <div class="bodyAll">
+      <section data-aos="fade-left" id="one">
+        <p>Informe o nome do funcionário(a):</p>
+        <input type="text" id="nomeFuncionario" />
+        <p>Informe o seu valor a hora:</p>
+        <input type="text" id="ValorHora" />
+        <button class="submit" id="botao">Verificar</button>
+      </section>
+      <div id="second">
+        <p>Descrição do pagamento:</p>
+        <div class="geral">
+          <div class="pagamentoSujo">
+            <p id="retornoNomeFuncionario">Funcionário: Não definido</p>
+            <br />
+            <p>Acressimos:</p>
+            <br />
+            <div class="secoes">
+              <p>Horas normais:</p>
+              <p id="mod1"></p>
+            </div>
+            <div class="secoes">
+              <p>Horas repouso remunerado:</p>
+              <p id="mod2"></p>
+            </div>
+            <div class="secoes">
+              <p>Total do pagamento sujo:</p>
+              <p id="modTotalSujo"></p>
+            </div>
+          </div>
+          <div class="descontos">
+            <br /><br />
+            <p>Descontos:</p>
+            <br />
+            <div class="secoes">
+              <p>I.N.S.S:</p>
+              <p id="mod5"></p>
+            </div>
+            <div class="secoes">
+              <p>Desc.Adiant.Salarial:</p>
+              <p id="mod7"></p>
+            </div>
+            <div class="secoes">
+              <p>Horas Faltas:</p>
+              <p id="mod8"></p>
+            </div>
+            <div class="secoes">
+              <p>Total dos descontos:</p>
+              <p id="modDesconto"></p>
+            </div>
+          </div>
+        </div>
+        <div class="valorFinal">
+          <p>Valor Final:</p>
+          <p id="pagamentoLimpo"></p>
+          <button id="fechar">Fechar</button>
+        </div>
+      </div>
+    </div>
+    <!-- script para as animações da biblioteca -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
